@@ -1,14 +1,13 @@
 # 03-render-template - render_template 基礎教學
 
 ## 步驟 1：建立專案檔案
-1. 建立資料夾 `03-render-template`
-2. 在資料夾內建立 `app.py`
-3. 建立 `templates` 資料夾
-4. 在 `templates` 裡建立 `index.html`
+
+1. 建立 `templates` 資料夾
+2. 在 `templates` 裡建立 `index.html`
 
 ---
 
-## 步驟 2：app.py 範例程式
+## 步驟 2：app.py 
 
 ```python
 from flask import Flask, render_template
@@ -23,3 +22,16 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+```
+## 步驟 3：index.html
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一個 Flask 頁面</title>
+</head>
+<body>
+    <h1>Hello {{ name }}</h1>
+</body>
+</html>
+```
