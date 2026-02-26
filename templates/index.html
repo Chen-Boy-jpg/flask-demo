@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>我的第一個 Flask 頁面</title>
+    <title>Flask + Jinja2 教學</title>
 </head>
 <body>
-    <h1>Hello {{ name }}</h1>
+    <h1>文章列表</h1>
+
+    <!-- if 條件判斷 -->
+    {% if show_ads %}
+        <div style="color: red;">這裡可以放廣告區塊</div>
+    {% endif %}
+
+    <ul>
+        <!-- for 迴圈 -->
+        {% for post in posts %}
+            <li>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.content }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- if else 範例 -->
+    {% if posts|length == 0 %}
+        <p>目前沒有文章 😢</p>
+    {% else %}
+        <p>總共有 {{ posts|length }} 篇文章 📝</p>
+    {% endif %}
+
 </body>
 </html>
