@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+
+<div class="article-wrapper">
+
+    <h1 class="article-title">{{ post.title }}</h1>
+
+    <div class="article-meta">
+        發布於 Flask Blog
+    </div>
+
+    <hr class="article-divider">
+
+    <div class="article-content">
+        {{ post.content }}
+    </div>
+
+    <div class="article-actions">
+        <a href="{{ url_for('edit', post_id=post.id) }}" class="btn-secondary">編輯</a>
+        <a href="{{ url_for('delete', post_id=post.id) }}" class="btn-danger">刪除</a>
+        <a href="{{ url_for('index') }}" class="btn-light">回首頁</a>
+    </div>
+
+</div>
+
+{% endblock %}

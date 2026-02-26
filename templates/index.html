@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}文章列表{% endblock %}
+
+{% block content %}
+<h1>文章列表</h1>
+
+{% if posts %}
+    {% for post in posts %}
+        <div class="post-card">
+            <h3>{{ post.title }}</h3>
+            <div class="action-links">
+                <a href="{{ url_for('view', post_id=post.id) }}">查看</a>
+                <a href="{{ url_for('edit', post_id=post.id) }}">編輯</a>
+                <a href="{{ url_for('delete', post_id=post.id) }}">刪除</a>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>目前還沒有文章</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Flask Blog{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="layout">
+
+<header class="navbar">
+    <div class="nav-content">
+        <h2 class="logo">FlaskBlog</h2>
+        <div>
+            <a href="{{ url_for('index') }}">首頁</a>
+            <a href="{{ url_for('create') }}" class="btn-nav">新增文章</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="footer">
+    © 2026 Flask 教學示範
+</footer>
+
+</body>
+</html>
