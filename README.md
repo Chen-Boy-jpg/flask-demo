@@ -21,3 +21,4 @@ def home():
 # 啟動伺服器
 if __name__ == "__main__":  # 當這個檔案被直接執行時才啟動伺服器
     app.run(debug=True)      # 啟動 Flask 伺服器，debug=True 會自動重載程式且顯示錯誤訊息
+
