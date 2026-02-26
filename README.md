@@ -1,14 +1,11 @@
 # 04-jinja2 - Jinja2 語法教學
 
-## 步驟 1：建立專案檔案
-1. 建立資料夾 `04-jinja2`
-2. 在資料夾內建立 `app.py`
-3. 建立 `templates` 資料夾
-4. 在 `templates` 裡建立 `index.html`
+
+
 
 ---
 
-## 步驟 2：app.py 範例程式
+## 步驟 1：app.py 範例程式
 
 ```python
 from flask import Flask, render_template
@@ -37,7 +34,7 @@ if __name__ == "__main__":
 
 ---
 
-## 步驟 3：templates/index.html
+## 步驟 2：templates/index.html
 
 ```html
 <!DOCTYPE html>
@@ -74,7 +71,7 @@ if __name__ == "__main__":
 ```
 
 
-## 步驟 4：Jinja2 語法說明表
+## Jinja2 語法說明表
 
 | 語法       | 範例                                           | 功能                                      |
 |-----------|----------------------------------------------|-----------------------------------------|
@@ -87,11 +84,12 @@ if __name__ == "__main__":
 
 ---
 
-## 步驟 5：執行專案
+## 步驟 3：執行專案
 
 1. 在專案資料夾打開終端機 / 命令提示字元  
 2. 執行：
 
 ```bash
 python app.py
+
 
