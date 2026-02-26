@@ -1,13 +1,9 @@
-# 01-flask-init - 建立第一個 Flask 專案
 
-## 步驟 1：建立專案檔案
-1. 建立資料夾 `01-flask-init`
-2. 在資料夾內建立 `app.py`
 
----
+## 寫一個簡單程式
+建立 app.py
 
-## 步驟 2：寫入最簡單程式
-
+寫入
 ```python id="h9t2ak"
 from flask import Flask   # 從 flask 套件導入 Flask 類別
 
@@ -21,4 +17,5 @@ def home():
 # 啟動伺服器
 if __name__ == "__main__":  # 當這個檔案被直接執行時才啟動伺服器
     app.run(debug=True)      # 啟動 Flask 伺服器，debug=True 會自動重載程式且顯示錯誤訊息
+
 
