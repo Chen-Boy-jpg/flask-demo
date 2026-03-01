@@ -124,58 +124,61 @@ if __name__ == "__main__":
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>My First Flask Page</title>
-  </head>
-  <body>
-    <!-- 1️⃣ Basic Variable -->
+</head>
+<body>
+
+    <!-- Basic Variable -->
     <h1>Hello {{ name }}</h1>
 
-    <hr />
+    <hr>
 
-    <!-- 2️⃣ Display a Number -->
+    <!-- Display a Number -->
     <h2>Age: {{ age }}</h2>
 
-    <hr />
+    <hr>
 
-    <!-- 3️⃣ Conditional Statement (if) -->
+    <!-- Conditional Statement (if) -->
     {% if age >= 18 %}
-    <p>You are an adult.</p>
+        <p>You are an adult.</p>
     {% else %}
-    <p>You are under 18.</p>
+        <p>You are under 18.</p>
     {% endif %}
 
-    <hr />
+    <hr>
 
-    <!-- 4️⃣ Loop (for) -->
+    <!-- Loop (for) -->
     <h2>Hobbies:</h2>
     <ul>
-      {% for hobby in hobbies %}
-      <li>{{ hobby }}</li>
-      {% endfor %}
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+        {% endfor %}
     </ul>
 
-    <hr />
+    <hr>
 
-    <!-- 5️⃣ Loop + Condition -->
+    <!-- Loop + Condition -->
     <h2>Students:</h2>
     <ul>
-      {% for student in students %}
-      <li>
-        {{ student.name }} - {% if student.score >= 60 %} Pass {% else %} Fail
-        {% endif %}
-      </li>
-      {% endfor %}
+        {% for student in students %}
+            <li>
+                {{ student.name }} - 
+                {% if student.score >= 60 %}
+                    Pass
+                {% else %}
+                    Fail
+                {% endif %}
+            </li>
+        {% endfor %}
     </ul>
 
-    <hr />
+    <hr>
 
-    <!-- 6️⃣ Filter Examples -->
-    <p>Uppercase name: {{ name | upper }}</p>
-    <p>Lowercase name: {{ name | lower }}</p>
-    <p>Total hobbies: {{ hobbies | length }}</p>
-  </body>
+
+</body>
 </html>
 ```
 
 ---
+
