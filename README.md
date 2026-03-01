@@ -1,21 +1,14 @@
+from flask import Flask # Import the Flask class from the flask package
 
+app = Flask(**name**) # Create a Flask application instance, **name** represents the current module name
 
-## 寫一個簡單程式
-建立 app.py
+# Define the home route
 
-寫入
-```python id="h9t2ak"
-from flask import Flask   # 從 flask 套件導入 Flask 類別
+@app.route("/") # When a user visits "/" (the home page), the function below will be called
+def home():  
+ return "Hello Flask!" # Return text to the browser
 
-app = Flask(__name__)     # 建立一個 Flask 應用程式物件，__name__ 代表目前模組名稱
+# Start the server
 
-# 定義首頁路由
-@app.route("/")           # 當使用者訪問 "/" (首頁) 時，會呼叫下面這個函式
-def home():               
-    return "Hello Flask!" # 回傳文字到瀏覽器
-
-# 啟動伺服器
-if __name__ == "__main__":  # 當這個檔案被直接執行時才啟動伺服器
-    app.run(debug=True)      # 啟動 Flask 伺服器，debug=True 會自動重載程式且顯示錯誤訊息
-
-
+if **name** == "**main**": # Only run the server when this file is executed directly
+app.run(debug=True) # Start the Flask server, debug=True enables auto-reload and shows error messages
