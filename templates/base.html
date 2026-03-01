@@ -12,8 +12,8 @@
     <div class="nav-content">
         <h2 class="logo">FlaskBlog</h2>
         <div>
-            <a href="{{ url_for('index') }}">首頁</a>
-            <a href="{{ url_for('create') }}" class="btn-nav">新增文章</a>
+            <a href="{{ url_for('posts.index') }}">Home</a>
+            <a href="{{ url_for('posts.create') }}" class="btn-nav">New Post</a>
         </div>
     </div>
 </header>
@@ -24,7 +24,7 @@
 </main>
 
 <footer class="footer">
-    © 2026 Flask 教學示範
+    © 2026 Flask Tutorial Demo
 </footer>
 
 </body>

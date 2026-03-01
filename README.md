@@ -1,35 +1,53 @@
-# Flask 專案快速啟動
+# Flask Blog Demo (MVC)
 
-這份指南說明如何快速啟動本專案，包含建立 Conda 環境、安裝套件，以及啟動 Flask 伺服器。
+This is a simple teaching project demonstrating a basic Flask application structured
+following the **Model-View-Controller (MVC)** pattern. Posts are stored in a JSON file
+and can be created, viewed, edited, and deleted through a web interface.
 
----
+## Structure
 
-## 步驟 1：建立 Conda 環境
-
-在終端機或命令提示字元輸入以下指令，建立新的 Conda 環境（例如命名為 `flask_env`）：
-
-```bash
-conda create -n flask_env python=3.10 -y
+```
+app.py                    # application factory
+models/                   # data layer
+  post_model.py           # file-based storage functions
+controllers/              # controllers / view handlers
+  post_controller.py      # blueprint with routes for posts
+templates/                # Jinja2 templates (views)
+static/                   # CSS and other static assets
+posts.json                # data store
 ```
 
-## 步驟 2：安裝專案需求套件
+## Features
 
-確認專案資料夾內有 `requirements.txt`，然後在終端機或命令提示字元輸入：
+- List all posts
+- Create new post (auto-increment ID)
+- View a single post
+- Edit existing post
+- Delete post
+
+## Requirements
+
+The project uses Flask 3.x and standard Python libraries. Install dependencies:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
-## 步驟 3：啟動 Flask 專案
 
-在專案根目錄打開終端機或命令提示字元，執行以下指令啟動 Flask 伺服器：
+## Running
 
 ```bash
+# from project root
 python app.py
 ```
-## 步驟 4：開啟瀏覽器
 
-啟動 Flask 伺服器後，打開瀏覽器並輸入以下網址：
+The app runs on `http://127.0.0.1:5000` by default. Use the web UI to manage posts.
 
-```text
-http://127.0.0.1:5000
-```
+## Notes
+
+This is for educational use only. The JSON file storage is not suitable for
+production use; you may replace it with a database or ORM later. The MVC layout
+makes it easier to expand the app by adding new controllers or models.
+
+## License
+
+MIT-style educational sample. You’re free to copy and modify.
