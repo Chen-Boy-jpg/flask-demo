@@ -4,6 +4,8 @@ This is a simple teaching project demonstrating a basic Flask application struct
 following the **Model-View-Controller (MVC)** pattern. Posts are stored in a JSON file
 and can be created, viewed, edited, and deleted through a web interface.
 
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/f45e3347-786c-451a-aa35-b8927be24a2a" />
+
 ## Structure
 
 ```
